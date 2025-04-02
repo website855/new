@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameNgo - Register a Match</title>
+    <script>
+        let registeredMatches = [];
+
+        function generateMatchID() {
+            return "MATCH-" + Math.floor(1000 + Math.random() * 9000);
+        }
+
+        function createMatch() {
+            const matchID = generateMatchID();
+            registeredMatches.push(matchID);
+            document.getElementById("matchResult").innerHTML = `✅ Match Created! Match ID: <strong>${matchID}</strong>`;
+            document.getElementById("matchResult").style.color = "green";
+        }
+
+        function registerMatch() {
+            const enteredCode = document.getElementById("matchCode").value.trim();
+
+            if (enteredCode === "") {
+                document.getElementById("matchResult").innerHTML = "⚠️ Please enter a match ID.";
+                document.getElementById("matchResult").style.color = "red";
+                return;
+            }
+
+            if (registeredMatches.includes(enteredCode)) {
+                document.getElementById("matchResult").innerHTML = "✅ Match successfully registered!";
+                document.getElementById("matchResult").style.color = "green";
+            } else {
+                document.getElementById("matchResult").innerHTML = "❌ Invalid match ID. Please enter a valid ID.";
+                document.getElementById("matchResult").style.color = "red";
+            }
+        }
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background-color: #f8f9fa;">
+
+    <!-- Navigation Bar -->
+    <nav style="background-color: darkblue; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center;">
+            <img src="logo.jpg" alt="GameNgo Logo" style="height: 40px; width: 40px; border-radius: 50%; margin-right: 10px;">
+            <span style="font-size: 22px; font-weight: bold;">GameNgo</span>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 15px;">
+            <li><a href="home.html" style="color: white; text-decoration: none;">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- Match Registration Section -->
+    <div style="max-width: 400px; margin: 50px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h1 style="color: darkblue; font-size: 22px;">Register a Match</h1>
+        <p style="color: #555;">Create a new match or register using an existing match ID.</p>
+
+        <button onclick="createMatch()" style="width: 100%; padding: 12px; background: darkblue; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-bottom: 10px;">Create a Match</button>
+        
+        <div style="margin: 10px 0; font-weight: bold; color: #888;">OR</div>
+
+        <input type="text" id="matchCode" placeholder="Enter Match ID" style="width: 92%; padding: 10px; border: 2px solid darkblue; border-radius: 5px; font-size: 16px; margin-bottom: 10px; text-align: center;">
+        
+        <button onclick="registerMatch()" style="width: 100%; padding: 12px; background: darkblue; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Register Match</button>
+
+        <p id="matchResult" style="margin-top: 15px; font-size: 16px;"></p>
+    </div>
+
+</body>
+</html>

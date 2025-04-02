@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - GameNgo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #333;
+            color: white;
+            position: absolute;
+            top: 0;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar .home-btn a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px 15px;
+            background: #ff6600;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            margin-top: 80px;
+        }
+
+        .container img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            border: 2px solid #ff6600;
+        }
+
+        .container h2 {
+            margin-bottom: 10px;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 12px;
+            background: #ff6600;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .container button:hover {
+            background: #e65c00;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 10px;
+            }
+
+            .navbar .logo img {
+                height: 30px;
+            }
+
+            .navbar .home-btn a {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="GameNgo Logo">
+            GameNgo
+        </div>
+        <div class="home-btn">
+            <a href="home.html">Home</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="profile.webp" alt="Profile Image">
+        <h2>Welcome, <span id="username"></span>!</h2>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        const loggedInUser = sessionStorage.getItem("loggedInUser");
+
+        if (loggedInUser) {
+            document.getElementById("username").textContent = loggedInUser;
+        } else {
+            alert("No user logged in! Redirecting to login...");
+            window.location.href = "login.html";
+        }
+
+        function logout() {
+            sessionStorage.removeItem("loggedInUser");
+            alert("Logged out successfully!");
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>

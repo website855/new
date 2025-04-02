@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: navy;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; /* Makes the logo circular */
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-buttons button {
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    color: navy;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+.signup-btn {
+    background-color: #00008B; /* Dark Blue */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.signup-btn:hover {
+    background-color: navy;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Main Section */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+    justify-content: center;
+    align-items: center;
+    padding: 50px 5%;
+}
+
+.content {
+    max-width: 50%;
+}
+
+.content h1 {
+    font-size: 42px;
+    color: #00008B;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 20px;
+    color: #333;
+    margin: 15px 0;
+}
+
+.image-container {
+    max-width: 45%;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Main Section */
+@media (max-width: 768px) {
+    .content, .image-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    .content h1 {
+        font-size: 32px;
+    }
+    .content p {
+        font-size: 18px;
+    }
+}
+
+/* Blue Section */
+.blue-section {
+    background-color: #00008B;
+    color: white;
+    text-align: center;
+    padding: 50px 10%;
+}
+
+.blue-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.blue-section p {
+    font-size: 20px;
+}
+
+/* Image Row */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.image-row img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* White Section */
+.white-section {
+    background-color: white;
+    text-align: center;
+    padding: 50px 10%;
+}
+
+.white-section h2 {
+    font-size: 30px;
+    color: #00008B;
+}
+
+.white-section p {
+    font-size: 20px;
+}
+
+/* Three Box Layout */
+.box-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+    justify-content: center;
+    text-align: center;
+    padding: 50px 10%;
+    gap: 20px;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box img {
+    width: 100%;
+    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.box h3 {
+    font-size: 24px;
+    color: #00008B;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: auto;
+    min-height: 60px;
+}
+
+/* Box Button */
+.box button {
+    background-color: #00008B;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.box button:hover {
+    background-color: navy;
+}
+
+/* Responsive Boxes */
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        width: 90%;
+    }
+}

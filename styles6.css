@@ -1,0 +1,54 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fullscreen container */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #070707; /* Changed from #111 to match the theme */
+    color: white;
+    text-align: center;
+    cursor: pointer; /* Makes the entire page clickable */
+    transition: background 0.5s ease-in-out;
+}
+
+/* Logo styling */
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Added to make the logo circular */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Website name */
+.site-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+    .site-name {
+        font-size: 24px;
+    }
+}

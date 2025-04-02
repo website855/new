@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    color: #00008B;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.site-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-right {
+    margin-right: 10px;
+}
+
+.contact-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+    color: #f0f0f0;
+}
+
+/* Login Page Layout */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* Login Form */
+.login-form {
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    background: white;
+    color: darkblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    color: darkblue;
+    font-size: 22px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: darkblue;
+    margin-bottom: 3px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 3px;
+    border: 2px solid #00008B;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: navy;
+    box-shadow: 0 0 5px rgba(0, 0, 139, 0.5);
+}
+
+.forgot-password-btn {
+    background: none;
+    border: none;
+    color: #00008B;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.login-btn {
+    background-color: #00008B;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: #00008B;
+    border: 1px solid #00008B;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.signup-link a {
+    color: darkblue;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    color: navy;
+}
+
+/* Login Image */
+.login-image {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Forgot Password Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: darkblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 350px;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.reset-password-btn {
+    background: #00008B;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.reset-password-btn:hover {
+    background: navy;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-left {
+        margin-bottom: 5px;
+    }
+
+    .login-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .login-form {
+        max-width: 90%;
+    }
+
+    .login-image img {
+        max-width: 250px;
+    }
+
+    .popup {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px;
+    }
+
+    .logo {
+        height: 30px;
+        width: 30px;
+    }
+
+    .site-name {
+        font-size: 16px;
+    }
+
+    .login-form {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .login-btn,
+    .reset-password-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .login-image img {
+        max-width: 200px;
+    }
+}

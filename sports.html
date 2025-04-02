@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameNgo Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        /* Ensure carousel images are fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: auto; /* Maintains aspect ratio */
+            object-fit: cover;
+        }
+
+        /* Maintain proper aspect ratio on smaller screens */
+        @media (max-width: 768px) {
+            .carousel-inner img {
+                height: 250px; /* Set a fixed height for better mobile experience */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg bg-white shadow-sm p-3">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <img src="logo.jpg" alt="GameNgo Logo" class="logo me-2">  
+                <span class="fw-bold fs-4">GameNgo <span class="text-success">Booking</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">Video Games</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">Party Hall</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container mt-4">
+        <h4 class="fw-bold">Video Game Booking</h4>
+        <div class="row g-3">
+            <!-- Turf 1 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div id="carouselTurf1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="vg1.jpg" class="img-fluid" alt="Turf Image 1">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTurf1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselTurf1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">De Hoge Gaming</h5>
+                        <p><strong>Prices:</strong></p>
+                        <ul>
+                            <li>Two Controls: 600 LKR per hour</li>
+                            <li>Three Controls: 800 LKR per hour</li>
+                            <li>Four Controls: 1000 LKR per hour</li>
+                        </ul>
+                        <p><strong>Opening Hours:</strong></p>
+                        <ul>
+                            <li>10:00 AM - 11:59 PM (Extended if bookings available)</li>
+                            <li>Friday: 2:00 PM - 12:00 AM</li>
+                            <li>Sunday: 12:30 PM - 12:00 AM</li>
+                        </ul>
+                        <a href="turfbooking.html?turf=De Hoge Gaming" class="btn btn-success w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div id="carouselTurf3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="rs3.jpg" class="img-fluid" alt="Turf Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="rs4.jpg" class="img-fluid" alt="Turf Image 5">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="rs5.jpg" class="img-fluid" alt="Turf Image 6">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTurf2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselTurf2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">RS GAMING LOUNGE</h5>
+                        <p><strong>Address - No. 433 Ground floor, Grandpass road, Colombo 14 01400</strong></p>
+                        <p><strong>Prices:</strong></p>
+                        <ul>
+                            <p><strong>PS4</strong></p>
+                            <li>1 Hour - 1 Players - 500</li>
+                            <li>1/2 Hour - 1 Players - 300</li>
+                            <li>1 Hour - 2 Players - 600</li>
+                            <li>1/2 Hour - 2 Players - 300</li>
+                            <li>1 Hour - 3 or 4 Players - 700</li>
+                            <li>1/2 Hour - 3 or 4 Players - 400</li>
+                            <p></p>
+                            <p><strong>PS5</strong></p>
+                            <li>1 Hour - 1 Players - 600</li>
+                            <li>1/2 Hour - 1 Players - 400</li>
+                            <li>1 Hour - 2 Players - 800</li>
+                            <li>1/2 Hour - 2 Players - 400</li>
+                            <li>1 Hour - 3 or 4 Players - 500</li>
+                            <li>1/2 Hour - 3 or 4 Players - 900</li>
+                        </ul>
+                        <a href="turfbooking.html?turf=RS GAMING LOUNGE" class="btn btn-success w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div id="carouselTurf3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="game11.jpg" class="img-fluid" alt="Turf Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="game13.jpg" class="img-fluid" alt="Turf Image 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="game14.jpg" class="img-fluid" alt="Turf Image 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="game15.jpg" class="img-fluid" alt="Turf Image 5">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="game16.jpg" class="img-fluid" alt="Turf Image 6">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTurf3" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselTurf3" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Frozen Gaming Center</h5>
+                        <p><strong>Prices:</strong></p>
+                        <ul>
+                            <p><strong>PS5 Only Available</strong></p>
+                            <li>One Control: 450</li>
+                            <li>Two Controls: 600</li>
+                            <li>Three Controls: 750</li>
+                            <li>Four Controls: 900</li>
+                        </ul>
+                        <p><strong>Opening Hours:</strong></p>
+                        <ul>
+                            <li>11:00 AM - 01:00 AM (Daily)</li>
+                        </ul>
+                        <a href="turfbooking.html?turf=Frozen Gaming Center" class="btn btn-success w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div id="carouselTurf3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="gana4.jpg" class="img-fluid" alt="Gaming Hub Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="gana3.jpg" class="img-fluid" alt="Gaming Hub Image 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="gana2.jpg" class="img-fluid" alt="Gaming Hub Image 5">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="gana1.jpg" class="img-fluid" alt="Gaming Hub Image 6">
+                            </div>
+                            <div class="carousel-item">
+                                <video class="img-fluid" controls>
+                                    <source src="ganavideo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTurf3" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselTurf3" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Gana Gaming Hub</h5>
+                        <p><strong>Address:</strong> No.11, Manning Place, Wellawatte, Colombo - 06.</p>
+                        <p><strong>Operating Hours:</strong></p>
+                        <ul>
+                            <li>Weekdays: 12PM - 12AM</li>
+                            <li>Weekends: 10AM - 12AM</li>
+                        </ul>
+                        <p><strong>Prices:</strong></p>
+                        <ul>
+                            <li>1 Player - 400</li>
+                            <li>2 Players - 600</li>
+                            <li>3 Players - 800</li>
+                            <li>4 Players - 1000</li>
+                        </ul>
+                        <a href="turfbooking.html?turf=Gana Gaming Hub" class="btn btn-success w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center p-3 mt-4">
+        <p>© 2025 GameNgo. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameNgo Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        /* Ensure carousel images are fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: auto; /* Maintains aspect ratio */
+            object-fit: cover;
+        }
+
+        /* Maintain proper aspect ratio on smaller screens */
+        @media (max-width: 768px) {
+            .carousel-inner img {
+                height: 250px; /* Set a fixed height for better mobile experience */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg bg-white shadow-sm p-3">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <img src="logo.jpg" alt="GameNgo Logo" class="logo me-2">  
+                <span class="fw-bold fs-4">GameNgo <span class="text-success">Booking</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">Pool Club</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">Party Hall</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container mt-4">
+        <h4 class="fw-bold">Pool Club Game Booking</h4>
+        <div class="row g-3">
+            <!-- Turf 1 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div id="carouselTurf3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="rs1.jpg" class="img-fluid" alt="Turf Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="rs2.jpg" class="img-fluid" alt="Turf Image 5">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTurf2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselTurf2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">RS GAMING LOUNGE</h5>
+                        <p><strong>Address - No. 433 Ground floor, Grandpass road, Colombo 14 01400</strong></p>
+                        <p><strong>Prices:</strong></p>
+                        <ul>
+                            <p><strong>Pool Table</strong></p>
+                            <li>1 Hour - 700</li>
+                            <li>1/2 Hour - 400</li>
+                            <p></p>
+                            <p><strong>carrom</strong></p>
+                            <li>1 Hour - 400</li>
+                            <li>1/2 Hour - 250</li>
+                        </ul>
+                        <a href="turfbooking.html?turf=RS GAMING LOUNGE" class="btn btn-success w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center p-3 mt-4">
+        <p>© 2025 GameNgo. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
